@@ -55,19 +55,19 @@ const team = [
 let container = document.getElementById(`container`)
 
  //ciclo all'interno della mia array
-for (let i = 0; i < team.length; i++) {
-    const teams = team[i];
-    console.log(teams);
+// for (let i = 0; i < team.length; i++) {
+//     const teams = team[i];
+//     console.log(teams);
 
-    // ad ogni iterazione creao il markup che mi serve 
-    const marKupName = `<div class="name">${teams.name}</div>`
-    const markupRole = `<div class="role">${teams.role}</div>`
-    const markupImage = `<div class="img"> <img src="${teams.image}" alt="">
-    </div>`
-    container.innerHTML += marKupName
-    container.innerHTML += markupRole
-    container.innerHTML += markupImage
-}
+//     // ad ogni iterazione creao il markup che mi serve 
+//     const marKupName = `<div class="name">${teams.name}</div>`
+//     const markupRole = `<div class="role">${teams.role}</div>`
+//     const markupImage = `<div class="img"> <img src="${teams.image}" alt="">
+//     </div>`
+//     container.innerHTML += marKupName
+//     container.innerHTML += markupRole
+//     container.innerHTML += markupImage
+// }
 
 
 // Bonus trasformare la stringa foto in un'immagine effettiva
@@ -76,3 +76,22 @@ for (let i = 0; i < team.length; i++) {
 
 
 
+
+
+// Bonus formare una card per ogni persona del team
+// recupero l'elemento row dalla dom
+let rowElement = document.querySelector(`.row`);
+
+//ciclo all'interno dell'array
+for (let i = 0; i < team.length; i++) {
+    const rowTeam = team[i];
+    //inserisco il markup per ogni sezione 
+    const markup = ` <div class="col">
+    <div class="card"> <h2>${rowTeam.name}</h2><h5>${rowTeam.role}</h5> <img src="${rowTeam.image}"alt="">
+        
+    </div></div>`
+    
+//aggiungo gli elementi in pagina
+    rowElement.insertAdjacentHTML(`beforeend`, markup)
+    
+}
