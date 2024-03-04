@@ -11,11 +11,11 @@
 
 # Steps
 - stamapre su console le informazioni di nome ruole e la stringa della foto 
-- stampare a schermo tramite un ciclo for-in tutte le informazioni dell'oggetto
+- stampare a schermo tramite un ciclo for tutte le informazioni dell'oggetto
 - trasformare la stringa foto in un'immagine effettiva
 - formare una card per ogni persona del team
 
 
 # Tools
 - 1 consol.log
-- 2 ciclo for-in
+- 2 ciclo for
