@@ -2,37 +2,37 @@ const team = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
-        image: 'wayne-barnett-founder-ceo.jpg',
+        image: '/assets/img/wayne-barnett-founder-ceo.jpg',
     },
 
     {
         name: 'Angela Caroll',
         role: 'Chief Editor',
-        image: 'angela-caroll-chief-editor.jpg',
+        image: '/assets/img/angela-caroll-chief-editor.jpg',
     },
 
     {
         name: 'Walter Gordon',
         role: 'Office Manager',
-        image: 'walter-gordon-office-manager.jpg',
+        image: '/assets/img/walter-gordon-office-manager.jpg',
     },
 
     {
         name: 'Angela Lopez',
         role: 'Social Media Manager',
-        image: 'angela-lopez-social-media-manager.jpg',
+        image: '/assets/img/angela-lopez-social-media-manager.jpg',
     },
 
     {
         name: 'Scott Estrada',
         role: 'Developer',
-        image: 'scott-estrada-developer.jpg',
+        image: '/assets/img/scott-estrada-developer.jpg',
     },
 
     {
         name: 'Barbara Ramos',
         role: 'Graphic Designer',
-        image: 'barbara-ramos-graphic-designer.jpg',
+        image: '/assets/img/barbara-ramos-graphic-designer.jpg',
     },
 
 ];
@@ -54,7 +54,7 @@ const team = [
 // recupero l'elemento della dom
 let container = document.getElementById(`container`)
 
-// ciclo all'interno della mia array
+ //ciclo all'interno della mia array
 for (let i = 0; i < team.length; i++) {
     const teams = team[i];
     console.log(teams);
@@ -62,11 +62,17 @@ for (let i = 0; i < team.length; i++) {
     // ad ogni iterazione creao il markup che mi serve 
     const marKupName = `<div class="name">${teams.name}</div>`
     const markupRole = `<div class="role">${teams.role}</div>`
-    const markupImage = `<div class="img">${teams.image}</div>`
+    const markupImage = `<div class="img"> <img src="${teams.image}" alt="">
+    </div>`
     container.innerHTML += marKupName
     container.innerHTML += markupRole
     container.innerHTML += markupImage
-
-
 }
+
+
+// Bonus trasformare la stringa foto in un'immagine effettiva
+// - cambiare url dell'immagine sull'arraay di oggeti
+// - cambiare il markup al ciclo
+
+
 

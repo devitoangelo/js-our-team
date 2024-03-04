@@ -17,8 +17,11 @@
    - recupero l'elemento dalla dom 
    - faccio un ciclo 
    - faccio un markup per ogni iterazione necessaria
-- trasformare la stringa foto in un'immagine effettiva
-- formare una card per ogni persona del team
+- 3.0 (Bonus) trasformare la stringa foto in un'immagine effettiva
+    - cambiare url dell'immagine sull'arraay di oggeti e il markup al ciclo
+- 4.0 formare una card per ogni persona del team
+    -
+
 
 
 # Tools
@@ -29,4 +32,6 @@
     - getelementbyid
     - ciclo for
     - markup
-- 3    
+- 3
+    - cambiare l'url all'array 
+    - cambiare il markup
